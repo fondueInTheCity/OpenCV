@@ -1,4 +1,5 @@
 #include "lab1.h"
+#include "threshold.h"
 
 void laba1(cv::String imagePath) {
     const int N = 2;
@@ -6,4 +7,6 @@ void laba1(cv::String imagePath) {
     cv::String names[N] = { "Image RGB", "Image 0" };
 
     end(N, names, images);
+
+    main2();
 }

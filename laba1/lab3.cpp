@@ -7,10 +7,10 @@ void laba3() {
     int apiID = cv::CAP_ANY;
     cap.open(deviceID + apiID);
 
-    for (;; cap.read(frame)) {
-        //sobel(&frame);
+    while (cap.read(frame)) {
+        sobel(&frame);
         //laplas(&frame);
-        canny(&frame);
+        //canny(&frame);
 
         imshow("Live", frame);
         if (cv::waitKey(5) >= 0)

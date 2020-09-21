@@ -5,6 +5,7 @@ void laba2(cv::String imagePath) {
     blur2(imagePath);
     erosionAndDilatation3(imagePath);
     canny4(imagePath);
+    normalaizeGistogramm5(imagePath);
 }
 
 void convolution1(cv::String imagePath) {
@@ -58,6 +59,19 @@ void canny4(cv::String imagePath) {
     canny(&cannyImg);
 
     cv::Mat images[]{ img, cannyImg };
+
+    end(N, names, images);
+}
+
+void normalaizeGistogramm5(cv::String imagePath) {
+    const int N = 2;
+    cv::String names[]{ "Initial", "Eequalize Hist" };
+    cv::Mat img(imread(imagePath, 1)), grayImg, equalizeHistImage;
+
+    cv::cvtColor(img, grayImg, CV_RGB2GRAY);
+    cv::equalizeHist(grayImg, equalizeHistImage);
+
+    cv::Mat images[]{ img, equalizeHistImage };
 
     end(N, names, images);
 }

@@ -11,3 +11,5 @@ void blur2(cv::String imagePath);
 void erosionAndDilatation3(cv::String imagePath);
 
 void canny4(cv::String imagePath);
+
+void normalaizeGistogramm5(cv::String imagePath);

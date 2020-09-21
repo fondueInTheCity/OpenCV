@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "threshold.h"
+
 using namespace cv;
 
 int threshold_value = 0;
@@ -23,7 +25,7 @@ void Threshold_Demo(int, void*);
 /**
  * @function main
  */
-int main2(int argc, char** argv)
+int main2()
 {
     /// Load an image
     src = imread("C:\\Users\\fando\\Projects\\sample\\hello-world.png", 1);

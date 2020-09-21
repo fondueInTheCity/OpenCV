@@ -6,8 +6,8 @@
 const char const* imagePath = "C:\\Users\\fando\\Projects\\sample\\hello-world.png";
 
 int main(int argc, char** argv) {
-    //laba1(imagePath);
-    laba2(imagePath);
+    laba1(imagePath);
+    //laba2(imagePath);
     //laba3();
 
     return 0;
